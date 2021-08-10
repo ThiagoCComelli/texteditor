@@ -1,0 +1,53 @@
+
+.mainHome {
+    position: relative;
+    width: 100vw;
+}
+
+.mainHomeContent {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.mainHomeContentDivTextarea {
+    position: relative;
+}
+
+.mainHomeContentText {
+    z-index: 10;
+    flex: 1;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    border: none;
+    resize: none;
+    line-height: 20px;
+    padding: 10px 7px;
+    font-size: 1rem;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+
+.mainHomeLineNumbers {
+    padding-top: 10px;
+}
+
+.mainHomeLineNumber {
+    position: relative;
+    align-items: flex-end;
+    height: 20px;
+    width: 100%;
+    padding: 0 5px 0 15px;
+    text-align: end;
+}
+
+.mainHomeLineNumber:nth-of-type(odd) .mainHomeLineNumberSpan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-width: 100%;
+    height: 100%;
+    background-color: #FAFAFA;
+}
