@@ -1,0 +1,46 @@
+.mainNotification {
+    /* animation: 2s load forwards; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    /* width: 250px; */
+    background-color: #5CB85C;
+    margin: 10px 20px;
+    padding: 10px 20px 12px 20px;
+    color: rgb(29, 29, 29);
+    cursor: pointer;
+    z-index: 11;
+}
+
+.mainNotificationContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainNotification > span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #376E37;
+}
+
+.mainNotification > span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    animation: notificationLoading 2s forwards linear;
+    background-color: rgb(230, 230, 230);
+}
+
+
+@keyframes notificationLoading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

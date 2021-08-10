@@ -1,0 +1,49 @@
+.mainHome {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background-color: #FAFAFA;
+}
+
+.mainHomeTitle h1 {
+    font-size: 3.4rem;
+}
+
+.mainHomeTitle span {
+    font-size: 1.2rem;
+}
+
+.mainHomeFind {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: solid 1px #eee;
+    background-color: #fff;
+}
+
+.mainHomeFindButton {
+    color: rgb(219, 219, 219);
+    cursor: pointer;
+}
+
+.mainHomeFindButton:hover {
+    color: rgb(151, 151, 151);
+
+}
+
+.mainHomeFind input {
+    font-size: 1rem;
+    width: 100%;
+    padding: 7px 15px;
+    border: none;
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+}
