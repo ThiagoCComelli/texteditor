@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
-import { notificationsInterface } from './reducers'
+import { notificationsInterface, socketInterface } from './reducers'
 
 const allReducers = combineReducers({
-    notifications: notificationsInterface
+    notifications: notificationsInterface,
+    socket: socketInterface
 })
 
 export default allReducers

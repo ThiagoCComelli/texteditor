@@ -11,3 +11,16 @@ export const removeNotification = (id) => {
         payload: id
     }
 }
+
+export const putSocket = (socket) => {
+    return {
+        type: 'PUT_SOCKET.IO',
+        payload: socket
+    }
+}
+
+export const removeSocket = () => {
+    return {
+        type: 'REMOVE_SOCKET.IO'
+    }
+}

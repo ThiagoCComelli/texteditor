@@ -11,4 +11,15 @@ const notificationsInterface = (state = [], action) => {
     }
 }
 
-export {notificationsInterface}
+const socketInterface = (state = null, action) => {
+    switch (action.type) {
+        case 'PUT_SOCKET.IO':
+            return action.payload
+        case 'REMOVE_SOCKET.IO':
+            return null
+        default:
+            return state
+    }
+}
+
+export {notificationsInterface,socketInterface}
