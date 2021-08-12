@@ -15,6 +15,7 @@ const io = new Server(server, {
 
 
 io.on('connection', (socket) => {
+    var currentRoomId = ""
     console.log(`a user connected: ${socket.id}`)
 
     socket.on('sendMessage', ({message,roomId}) => {
@@ -22,10 +23,18 @@ io.on('connection', (socket) => {
     })
 
     socket.on('joinRoom', (roomId) => {
+        currentRoomId = roomId
         socket.join(roomId)
     })
 
-    socket.on('disconnect', (socket) => {
+    socket.on('sendMouse', (mouseStats) => {
+        socket.to(mouseStats.roomId).emit('mouse', {id: socket.id, payload:{mouseX:mouseStats.mouse.mouseX,mouseY:mouseStats.mouse.mouseY}})
+    })
+
+    socket.on('disconnect', () => {
+        console.log(currentRoomId)
+        console.log(socket.id)
+        socket.to(currentRoomId).emit('disconnected', socket.id)
         console.log(`User disconnected`)
     })
 
